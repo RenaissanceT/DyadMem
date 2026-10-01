@@ -16,12 +16,32 @@
           <span class="title-subtitle">A Long-Term Memory Benchmark of How Agents Work with Users</span>
         </h1>
         <p class="authors">
-          <a href="#">First Author</a><sup>1</sup>,
-          <a href="#">Second Author</a><sup>1</sup>,
-          <a href="#">Third Author</a><sup>2</sup>
+          <span class="author-line">
+            Yifei Tao<sup>1,4,*</sup>,
+            Xinyu Zhong<sup>4,*</sup>,
+            Henry Hengyuan Zhao<sup>2,*</sup>,
+            Fanyi Wang<sup>4,*,‡</sup>,
+          </span>
+          <span class="author-line">
+            Tengda Guo<sup>4</sup>,
+            Wentao Qiu<sup>4</sup>,
+            Ying Wang<sup>3</sup>,
+            and Liujian Tang<sup>4,†</sup>
+          </span>
         </p>
-        <p class="affiliations"><sup>1</sup>University One &nbsp; <sup>2</sup>University Two</p>
-        <p class="venue">[Conference or Journal, Year]</p>
+        <p class="affiliations">
+          <span class="affiliation"><sup>1</sup>Nanyang Technological University</span>
+          <span class="affiliation"><sup>2</sup>National University of Singapore</span>
+          <span class="affiliation"><sup>3</sup>University of Hong Kong</span>
+          <span class="affiliation"><sup>4</sup>Stepfun</span>
+        </p>
+        <p class="affiliations">
+          <span class="affiliation"><sup>*</sup>Equal contribution</span>
+          <span class="affiliation"><sup>‡</sup>Team lead</span>
+          <span class="affiliation"><sup>†</sup>Corresponding author</span>
+        </p>
+        <p class="affiliations">Corresponding author email: <a href="mailto:alex@stepfun.com">alex@stepfun.com</a></p>
+        <p class="venue">Preprint, 2026</p>
         <nav class="actions" aria-label="Paper links">
           <a class="button button-dark" href="#" aria-label="Read the paper">
             <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.75h8.2L19 7.55v13.7H6z"></path><path d="M14 2.75v5h5M8.5 13h8M8.5 16h6M8.5 10h3"></path></svg>
@@ -41,20 +61,21 @@
 
     <main>
       <section class="section">
-        <div class="container overview-grid">
-          <div>
-            <p class="section-kicker">OVERVIEW</p>
+        <div class="container overview">
+          <p class="section-kicker">OVERVIEW</p>
+          <div class="overview-grid">
             <h2>Abstract</h2>
-          </div>
-          <div class="copy">
-            <p>[Paste your paper abstract here. Briefly describe the problem, your approach, and the main result. This text is placeholder content and should be replaced before publishing.]</p>
-            <p>[Add one or two sentences explaining why this problem matters and what makes your approach different.]</p>
+            <div class="copy">
+            <p>Long-term agents must remember not only what is true about a user, but also how a particular agent should work with that user as their shared history evolves. Existing benchmarks primarily supervise user facts and preferences or experience reusable across users, leaving this relationship-specific agent memory implicit. Additionally, most prior works measure the model solely with final-answer QA over long interaction histories, making the assessment still incomplete and unreliable. To this end, we introduce DyadMem with the proposed new definition User-conditioned Relational Agent Memory (URAM). DyadMem jointly annotates user-side memory and URAM along the same multi-session trajectories, resulting in 6 memory categories. To summarize, it includes 3,065 episodes, 50,961 sessions, and 61,210 QA instances, with extensive session-level Capture and Update gold annotations, query-level Recall support, and two QA settings: Gold-Memory and Full-Pipeline. Across 16 open-weight and 4 proprietary models, Gold-Memory QA is consistently strong, yet Full-Pipeline QA drops sharply. Such a gap explicitly supports our fine-grained evaluation design. Additionally, several quantitative results further reveal low Capture recall, incomplete Recall, and unsafe-deletion issues arising from even the frontier LLMs. We further conduct a rigorous experiment to validate the effectiveness of our URAM and observe the positive effects for all 20 models. In summary, DyadMem is a dual-domain, full-pipeline memory benchmark with extensive annotation efforts for advancing the domain’s development.            </p>
+            </div>
           </div>
         </div>
         <div class="container teaser-after-abstract">
+          <div class="section-heading">
+            <h2>Teaser</h2>
+          </div>
           <figure class="paper-figure wide-figure">
             <img class="teaser-image" src="./assets/Teaser.png" alt="Overview of the DyadMem benchmark and memory workflow">
-            <figcaption>[Teaser figure caption — edit later]</figcaption>
           </figure>
         </div>
       </section>
@@ -64,11 +85,9 @@
           <div class="section-heading">
             <p class="section-kicker">DATASET</p>
             <h2>Data Statistics</h2>
-            <p>[Add a short description of the dataset and the statistics shown below.]</p>
           </div>
           <figure class="paper-figure wide-figure">
             <img class="paper-image image-wide" src="./assets/main_3.2_data_statistics.png" alt="Dataset statistics, category distribution, and token composition">
-            <figcaption>[Dataset statistics figure caption — edit later]</figcaption>
           </figure>
         </div>
       </section>
@@ -78,11 +97,9 @@
           <div class="section-heading">
             <p class="section-kicker">METHOD</p>
             <h2>Data Pipeline</h2>
-            <p>[Add a short introduction to the data-generation or processing pipeline.]</p>
           </div>
           <figure class="paper-figure wide-figure">
             <img class="paper-image image-pipeline" src="./assets/appendix_data_pipeline.png" alt="Data pipeline diagram">
-            <figcaption>[Data pipeline figure caption — edit later]</figcaption>
           </figure>
         </div>
       </section>
@@ -92,21 +109,17 @@
           <div class="section-heading">
             <p class="section-kicker">EVALUATION</p>
             <h2>Main Results</h2>
-            <p>[Summarize the key findings. Captions and descriptions can be refined later.]</p>
           </div>
           <div class="result-grid">
             <figure class="paper-figure">
               <img class="paper-image" src="./assets/main_4.2_unsafe_deletion.svg" alt="Unsafe deletion rates across evaluated models">
-              <figcaption>[Unsafe deletion results — edit caption later]</figcaption>
             </figure>
             <figure class="paper-figure">
               <img class="paper-image" src="./assets/main_4.7_judge_model_rank_1.svg" alt="Model ranking under different judge models">
-              <figcaption>[Judge-model ranking — edit caption later]</figcaption>
             </figure>
           </div>
           <figure class="paper-figure full-figure">
             <img class="paper-image" src="./assets/main_4.7_3_metrics_heatmap.svg" alt="Heatmap comparing three evaluation metrics across models">
-            <figcaption>[Three-metric comparison — edit caption later]</figcaption>
           </figure>
         </div>
       </section>
@@ -116,11 +129,9 @@
           <div class="section-heading">
             <p class="section-kicker">ANALYSIS</p>
             <h2>Supplementary Analysis</h2>
-            <p>[Optional introduction to the supplementary figures.]</p>
           </div>
           <figure class="paper-figure full-figure">
             <img class="paper-image" src="./assets/appendix_20_model_6_memory.svg" alt="Memory-related results for 20 evaluated models">
-            <figcaption>[20-model memory analysis — edit caption later]</figcaption>
           </figure>
           <div class="detail-explorer" data-explorer="models">
             <div class="explorer-heading">
@@ -140,7 +151,6 @@
           </div>
           <figure class="paper-figure full-figure">
             <img class="paper-image" src="./assets/appendix_25_category_radars.svg" alt="Radar charts across 25 categories">
-            <figcaption>[25-category radar analysis — edit caption later]</figcaption>
           </figure>
           <div class="detail-explorer" data-explorer="categories">
             <div class="explorer-heading">
@@ -166,11 +176,13 @@
           <p class="section-kicker">REFERENCE</p>
           <h2>Citation</h2>
           <p>If you use this work, please cite:</p>
-          <pre><code>@inproceedings{yourpaper2026,
-  title     = {Your Paper Title},
-  author    = {First Author and Second Author and Third Author},
-  booktitle = {Conference Name},
-  year      = {2026}
+          <pre><code>@misc{tao2026dyadmem,
+  title        = {DyadMem: A Long-Term Memory Benchmark of How Agents Work with Users},
+  author       = {Tao, Yifei and Zhong, Xinyu and Zhao, Henry Hengyuan
+                  and Wang, Fanyi and Guo, Tengda and Qiu, Wentao
+                  and Wang, Ying and Tang, Liujian},
+  year         = {2026},
+  howpublished = {Preprint}
 }</code></pre>
           <button class="button button-dark" id="copy-citation" type="button">Copy BibTeX</button>
           <span class="copy-status" id="copy-status" aria-live="polite"></span>
