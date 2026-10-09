@@ -271,7 +271,42 @@ h2 { margin: 0 0 18px; font-size: clamp(1.8rem, 3vw, 2.45rem); line-height: 1.2;
 
 pre { overflow-x: auto; margin: 24px 0 18px; padding: 20px; border: 1px solid var(--line); border-radius: 9px; background: #20252b; color: #f2f4f5; font-size: 13px; line-height: 1.6; }
 .copy-status { margin-left: 10px; color: var(--accent); font-size: .9rem; }
-footer { padding: 28px 0; color: var(--muted); font-size: .85rem; text-align: center; border-top: 1px solid var(--line); }
+footer { color: var(--muted); font-size: .85rem; text-align: center; }
+.collab {
+  padding: 46px 24px 40px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+.collab-label {
+  margin: 0 0 26px;
+  color: #8d8478;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.collab-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px 56px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.collab-logos li { display: flex; align-items: center; justify-content: center; }
+.collab-logos img {
+  display: block;
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+}
+.collab-stepfun { gap: 10px; }
+.collab-logos .collab-mark { height: 44px; }
+.collab-logos .collab-wordmark { height: 22px; }
+.footer-note { padding: 22px 0; border-top: 1px solid var(--line); }
 
 @media (max-width: 760px) {
   body { font-size: 16px; }
@@ -297,4 +332,10 @@ footer { padding: 28px 0; color: var(--muted); font-size: .85rem; text-align: ce
   .explorer-pills { gap: 7px; }
   .explorer-pill { padding: 6px 12px; font-size: .76rem; }
   .explorer-viewer img { padding: 8px; }
+  .collab { padding: 34px 16px 28px; }
+  .collab-logos { gap: 22px 28px; }
+  .collab-logos img { height: 44px; }
+  .collab-stepfun { gap: 8px; }
+  .collab-logos .collab-mark { height: 34px; }
+  .collab-logos .collab-wordmark { height: 18px; }
 }
